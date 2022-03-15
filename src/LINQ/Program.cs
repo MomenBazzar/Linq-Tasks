@@ -27,8 +27,10 @@ namespace LINQ
 
         public static string? GetTheLastWord(IEnumerable<string> words)
         {
-            var resultWord = words.Where(word => word.Contains("e")).OrderBy(word => word).LastOrDefault();
-            return $"The last word is {resultWord}";
+            var resultWord = words.Where(word => word.Contains("e"))
+                                .OrderBy(word => word)
+                                .LastOrDefault();
+            return resultWord == null ? null: $"The last word is {resultWord}";
         }
     }
 }
