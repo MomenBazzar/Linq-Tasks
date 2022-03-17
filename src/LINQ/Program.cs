@@ -31,6 +31,7 @@ namespace LINQ
                                 .OrderBy(word => word)
                                 .LastOrDefault();
             return resultWord == null ? null: $"The last word is {resultWord}";
+
         }
     }
 }
